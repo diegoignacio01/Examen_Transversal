@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style2.css">
+  <title>Sig-in</title>
+  <script language="javaScript">
+  /*funcion para realizar evento*/
+    function cargar() {
+      alert("GRACIAS POR PREFERIRNOS");
+    }
+  </script>
+</head>
+<body onload="cargar();">
+  <form action="index.html">
+    <section class="form-register">
+      <h4>Sig-in</h4>
+
+      <!--Fomulario-->
+      <input class="controls" type="text" name="nombre" id="nombres" placeholder="Ingrese su Nombre" minlength="4" required> 
+      <input class="controls" type="text" name="apellido" id="apellidos" placeholder="Ingrese sus Apellidos" minlength="4" required>
+      <input class="controls" type="email" name="correo" id="correo" placeholder="Nombre@gmail.cl" required>
+      <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña" minlength="9" required>
+      <input class="controls" type="password" name="contraseña2" id="contraseña2" placeholder="Confirme su Contraseña" minlength="9" required> 
+    
+    
+      <h2 style="text-align: center;">Genero</h5><br>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Hombre</label><br>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Mujer</label><br>
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other">Otro</label><br><br>
+        
+      <label>Región: </label>
+      <select class= controls name="Región">
+        <option value="">Región de Arica y Parinacota</option> 
+        <option value="">Región de Tarapacá</option> 
+        <option value="">Región de Antofagasta</option> 
+        <option value="">Región de Atacama</option> 
+        <option value="">Región de Coquimbo</option> 
+        <option value="">Región de Valparaíso</option> 
+        <option value="">Región Metropolitana de Santiago</option> 
+        <option value="">Región del Libertador General Bernardo O’Higgins</option> 
+        <option value="">Región del Maule</option> 
+        <option value="">Región del Ñuble</option> 
+        <option value="">Región del Biobío</option> 
+        <option value="">Región de La Araucanía</option> 
+        <option value="">Región de Los Ríos</option>
+        <option value="">Región de Los Lagos</option> 
+        <option value="">Región de Aysén</option> 
+        <option value="">Región de Magallanes y la Antártica Chilena</option>  
+      <select>
+    
+      <input type="checkbox" id="Condiciones" name="Condiciones" value="Condiciones" required>
+      <label for="Condiciones"> Estoy de acuerdo con las politicas de privacidad</label><br>
+    
+      <input class="botons" type="submit" style="border-radius: 10px; " value="Registrar">
+      <br>
+    </section>
+    
+
+    <!--Boton para modificar la pantalla sin necesidad de recargarla-->
+    <label for="dark-mode" class="dark-mode-button">       
+      <input id="dark-mode" type="checkbox" 
+      onclick="document.documentElement.classList.toggle('dark-mode')">
+      Invertir Colores
+    </label>
+
+</body>
+</html>

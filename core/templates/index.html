@@ -1,0 +1,122 @@
+<!--LISTA-->
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="static/core/css/style.css">
+        <title>StoreWare</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    </head>
+    <body>
+<!-- menu navegador-->
+        <header>
+	<nav>
+		<ul>
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="quienesSomos.html">QUIENES SOMOS</a></li>
+            <li><a href="Login.html">INICIAR SESIÓN</a></li>
+            <li><a href="core/form_crearproducto.html">CREAR PRODUCTO</a></li>
+		</ul>
+	</nav>
+</header>
+<br><br><br><br>
+    
+<!--HOME-->
+        {% load static %}
+        <div id="inicio" style="width:100%">
+            <div id="home">
+                <img src="{%static 'core/img/iconoHome.png' %}" width="400px" height="400px" >
+                <br><br>
+                <h1>STOREWARE</h1>
+            </div>
+        </div>
+<br><br><br>
+<!--carrusel de imagenes-->
+<div class="slider">
+    <ul>
+        <li><img src="{%static 'core/img/discoMecanico.jpeg'%}" alt=""></li>
+        <li><img src="{%static 'core/img/discoSolido.jpeg'%}" alt=""></li>
+        <li><img src="{%static 'core/img/fuentePoder.jpeg'%}" alt=""></li>
+        <li><img src="{%static 'core/img/gabinete.jpeg'%}" alt=""></li>
+        <li><img src="{%static 'core/img/placaMadre.jpeg'%}" alt=""></li>
+        <li><img src="{%static 'core/img/procesador.jpeg'%}" alt=""></li>
+        <li><img src="{%static 'core/img/ram.jpeg'%}" alt=""></li>
+        <li><img src="{%static 'core/img/tarjetaGrafica.jpeg'%}" alt=""></li>
+    </ul>
+</div>
+
+<!--galeria de productos con efecto overley-->
+
+<div class="productos">
+    <h1>PRODUCTOS</h1>
+    <div class="linea"></div>
+    <div class="contenedor-imagenes">
+        <div class="imagen">
+            <a href="Cooler.html" target="_blank"><img src="{%static 'core/img/Intel E97379-001.png'%}" alt=""></a>
+            <div class="overlay">
+                <a href="Cooler.html"><h2>Cooler CPU</h2></a>
+            </div>
+        </div>
+        <div class="imagen">
+            <a href="discoSolido.html"><img src="{%static 'core/img/discoSolido.jpeg'%}" alt=""></a>
+            <div class="overlay">
+                <a href="discoSolido.html"><h2>Unidad de almacenamiento</h2></a>
+            </div>
+        </div>
+        <div class="imagen">
+            <a href="fuentePoder.html"><img src="{%static 'core/img/fuentePoder.jpeg'%}" alt=""></a>
+            <div class="overlay">
+                <a href="fuentePoder.html"><h2>Fuente de poder</h2></a>
+            </div>
+        </div>
+        <div class="imagen">
+            <a href="gabinete.html"><img src="{%static 'core/img/gabinete.jpeg'%}" alt=""></a>
+            <div class="overlay">
+                <a href="gabinete.html"><h2>Gabinete</h2></a>
+            </div>
+        </div>
+        <div class="imagen">
+            <a href="placaMadre.html"><img src="{%static 'core/img/placaMadre.jpeg'%}" alt=""></a>
+            <div class="overlay">
+                <a href="placaMadre.html"><h2>Placa madre</h2></a>
+            </div>
+        </div>
+        <div class="imagen">
+            <a href="procesador.html"><img src="{%static 'core/img/procesador.jpeg'%}" alt=""></a>
+            <div class="overlay">
+                <a href="procesador.html"><h2>Procesador</h2></a>
+            </div>
+        </div>
+        <div class="imagen">
+            <a href="ram.html"></a><img src="{%static 'core/img/ram.jpeg'%}" alt=""></a>
+            <div class="overlay">
+                <a href="ram.html"><h2>Ram</h2></a>
+            </div>
+        </div>
+        <div class="imagen">
+            <a href="tarjetaGrafica.html"><img src="{%static 'core/img/tarjetaGrafica.jpeg'%}" alt=""></a>
+            <div class="overlay">
+                <a href="tarjetaGrafica.html"><h2>Tarjeta gráfica</h2></a>
+            </div>
+        </div>  
+    </div>
+</div>
+<!--Párrafos de información-->
+<div class="informacion">
+    <p>Queremos ser tu partner tecnológico, para eso te ofrecemos un siempre renovado stock de productos con las ultimas tendencias de mercado, precios competitivos  y asesoría permanente. Monitoreo permanente de las ofertas del mercado retail para mantener precios convenientes para cualquier bolsillo.</p>
+    <p>Storeware tiene una amplia gama de categorías de productos y gran variedad de modelos, precios y marcas. Diversidad en opciones de despacho y alto estándar en el cumplimiento de las fechas de entrega de sus productos a lo largo de todo el país.</p>
+</div>
+
+
+
+<!--FOOTER-->
+<footer>
+    &copy;Copyrigth Derechos reservados - Diego Ibarra y Valentino Hernández<br>
+    <br>
+    <div id="redes">
+        <img src="{%static 'core/img/redes.png'%}" width="150px" height="40px">
+    </div>
+</footer>
+    </body>
+</html>

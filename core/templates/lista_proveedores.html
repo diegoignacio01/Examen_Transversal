@@ -1,0 +1,33 @@
+<!--LISTA-->
+
+<div class="row" id="tabla_productos"> 
+    <table border="1" > 
+        <tr>
+            <td>ID</td>
+            <td>fotografia</td>
+            <td>Nombre</td>
+            <td>Telefono</td>
+            <td>Direccion</td>
+            <td>Email</td>
+            <td>Pais</td>
+            <td>Contraseña</td>
+            <td>Moneda</td>
+            <td>Categoria</td>
+        </tr>
+        {%for ve in datos %}
+            <tr>
+                <td>{{ve.idProveedor}</td>
+                <td>{{ve.NombreCompleto}}</td>
+                <td>{{ve.Telefono}}</td>
+                <td>{{ve.Direccion}}</td>
+                <td>{{ve.Email}}</td>
+                <td>{{ve.Pais}}</td>
+                <td>{{ve.Contraseña}}</td>
+                <td>{{ve.MonedaPago}}</td>
+                <td>{{ve.categoria}}</td>
+            </tr>
+        {%endfor%}
+    </table>
+w
+</div>
+<br><br><br>

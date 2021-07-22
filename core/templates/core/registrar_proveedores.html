@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Registrar Proveedor</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+
+    <script>
+        $(function() 
+        {
+          $("formulario").validate({
+               rules: {
+                      id: "required",
+                      fotografia: "required",
+                      nombre: "required",
+                      telefono: "required",
+                      direccion: "required",
+                      email: "required",
+                      pais: "required",
+                      contraseña: "required",
+                      moneda: "required",
+                      categoria:"required"
+                      },   
+                      
+                 messages: 
+                  {
+                  id: {
+                      required: 'ingrese el numero identificador de el proveedor',
+                    },
+                    fotografia: {
+                      required: 'Ingrese la fotografia que identifique al proveedor(logo)',
+                  },
+                  nombre:{
+                      required: 'Ingrese nombre completo del proveedor',
+                  },
+                  telefono:{
+                      required: 'Ingrese numero telefonico de proveedo',
+                  },
+                  direccion:{
+                      required: 'Ingrese direccion de proveedor',
+                  },
+                  copntraseña:{
+                      required: 'la contraseña se generara automaticamente',
+                  },
+                  moneda:{
+                      required: 'Ingrese el tipo de moneda con que se realizara el pago',
+                  },
+                  categoria:{
+                      required: 'seleccione categoria',
+                  },  
+              }
+          }); 
+      }); 
+</script>
+
+</head>
+
+
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Registrar proveedor</h1>
+        </div>
+
+        <div class="row">
+            <div class="row">
+                <form method="POST" action="#" id="formulario">
+                    {%csrf_token%}
+                    <div class="form-group">
+                        {{proveedor_form.id.label}}
+                        {{proveedor_form.id}}              
+                    </div>
+                    <div class="form-group">
+                        {{proveedor_form.fotografia.label}}
+                        {{proveedor_form.fotografia}}
+                    </div>
+                    <div class="form-group">
+                        {{proveedor_form.nombre.label}}
+                        {{proveedor_form.nombre}}
+                    </div>
+                    <div class="form-group">
+                        {{proveedor_form.telefono.label}}
+                        {{proveedor_form.telefono}}
+                    </div>
+                    <div class="form-group">
+                        {{proveedor_form.direccion.label}}
+                        {{proveedor_form.direccion}}
+                    </div>
+                    <div class="form-group">
+                        {{proveedor_form.email.label}}
+                        {{proveedor_form.email}}
+                    </div>
+                    <div class="form-group">
+                        {{proveedor_form.pais.label}}
+                        {{proveedor_form.pais}}
+                    </div>
+                    <div class="form-group">
+                        {{proveedor_form.contraseña.label}}
+                        {{proveedor_form.contraseña}}
+                    </div>
+                    <div class="form-group">
+                        {{proveedor_form.moneda.label}}
+                        {{proveedor_form.moneda}}
+                    </div>
+                    <div class="form-group">
+                        {{proveedor_form.categoria.label}}
+                        {{proveedor_form.categoria}}
+                    </div>
+
+                    <div class="form-group">
+                         <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
+                        <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+                    </div>
+                </form>
+            </div>
+        </div>
+  </div>
+</body>
+</html>
